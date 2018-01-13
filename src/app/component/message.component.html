@@ -1,0 +1,8 @@
+<h3>Messages</h3>
+<div *ngIf="apiService.messages">
+
+  <div *ngFor ="let message of apiService.messages">
+    <mat-card>{{message.post}}</mat-card>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+<form #form="ngForm" novalidate>
+ <div *ngIf="authService.isAuthenticated">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h4>New Post</h4></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="example-full-width">
+        <textarea matInput [(ngModel)]="postMsg" name="postMsg" placeholder="New Post" type="input" value=""></textarea>
+      </mat-form-field>
+
+      <div class="button-row">
+        <button (click)="post()" mat-raised-button color="primary">Post</button>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+ </div>
+</form>

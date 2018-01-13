@@ -1,0 +1,29 @@
+<form #form="ngForm" novalidate>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title><h4>Register New User</h4></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+<mat-form-field class="example-full-width">
+  <input matInput [(ngModel)]="registerData.email" name="email" placeholder="Email" type="email" value="">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+  <input matInput [(ngModel)]="registerData.password" name="password" placeholder="Password" type="password" value="">
+</mat-form-field>
+        <br>
+<mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="registerData.name" name="name" placeholder="Name" type="input" value="">
+</mat-form-field>
+        <br>
+<mat-form-field class="example-full-width">
+    <textarea matInput [(ngModel)]="registerData.description" name="description" placeholder="Description" type="input" value=""></textarea>
+</mat-form-field>
+
+      <div class="button-row">
+        <button (click)="post()" mat-raised-button color="primary">Register</button>
+      </div>
+
+    </mat-card-content>
+</mat-card>
+</form>

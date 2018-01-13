@@ -1,0 +1,21 @@
+<form #form="ngForm" novalidate>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h4>Login</h4></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="example-full-width">
+        <input matInput [(ngModel)]="loginData.email" name="email" placeholder="Email" type="email" value="">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input matInput [(ngModel)]="loginData.password" name="password" placeholder="Password" type="password" value="">
+      </mat-form-field>
+
+      <div class="button-row">
+        <button (click)="post()" mat-raised-button color="primary">Login</button>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</form>
