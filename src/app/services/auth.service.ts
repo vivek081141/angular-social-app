@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import {environment} from "../../environments/environment";
 
 @Injectable()
 export class AuthService {
-  url:string ='http://localhost:3000';
   TOKEN:string ='token';
+  url:string =environment.path;
 
 
   constructor(private http:HttpClient) { }
